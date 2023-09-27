@@ -4,6 +4,7 @@ import React from 'react'
 import AppCard from './Components/Swiper'
 import Navbar from './Components/Navbar';
 import  Buttons from './Components/Buttons'
+import Profile from './Components/Profile'
 import './globals.css'
 
 import handleSubmit from './handler/handlesubmit';
@@ -28,12 +29,7 @@ const page = () => {
         <Buttons />
     
 
-    <div>
-      <form onSubmit={submithandler}>
-        <input type= "text" ref={dataRef} />
-        <button type = "submit">Save</button>
-      </form>
-    </div>
+    
     </>
   );
 };

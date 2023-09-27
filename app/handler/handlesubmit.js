@@ -9,6 +9,10 @@ const handleSubmit = (testdata) => {
     }
     
     try {
+documentRef.add({
+    name:"bhb"
+})
+
         addDoc(ref, data)
     } catch(err) {
         console.log(err)
