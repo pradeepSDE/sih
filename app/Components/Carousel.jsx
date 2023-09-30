@@ -16,7 +16,7 @@ function MyCarousel() {
         <div>
           <img src="" alt="Slide 3" />
         </div>
-        {/* Add more slides as needed */}
+        
       </Carousel>
     </div>
   );

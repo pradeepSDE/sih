@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Navbar from '../Components/Navbar'
+import Searchbar from '../Components/Searchbar'
 const page = () => {
     function submit(){
 
@@ -11,6 +12,7 @@ const page = () => {
         <Navbar/>
     
     <h1 className='text-6xl  text-white mt-24 ml-80 justify-items-center w-full font-extrabold '>Ministry of Ayush </h1>
+    <Searchbar/>
       
 
     </div>

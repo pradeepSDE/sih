@@ -1,11 +1,24 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Navbar from '../Components/Navbar'
 
 import { BrowserRouter } from 'react-router-dom'
+
 const page = () => {
-    function submit(){
+
+   const [Img,setImg] = useState('');
+
+     const oninputchange=(ev)=>{
+      // console.log(ev)
+      setImg(ev.target.value)
+      
+     };
+
+    function submit(ev){
+      ev.preventDefault()
+      console.log(Img)
+
        
     }
   return (
@@ -20,23 +33,13 @@ const page = () => {
      <div className='flex p-0 m-0'>
 
     
-    <form className='ml-40 text-white mt-8' action={submit}>
-            <input className='border rounded-lg   py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline'  placeholder='image..' type='file' >
+    <form className='ml-96 text-white mt-8' onSubmit={submit}>
+            <input  onInput={oninputchange} className='border rounded-lg    py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline'  placeholder='image..' type='file' >
             </input>
+            <button className='text-white block border-fuchsia-600 p-6 text-sm'>Submit</button>
             
         </form>
 
-    <form className='ml-40 text-white mt-8' action={submit}>
-           
-           <BrowserRouter>
-           
-           <Link href='../capture'>
-
-           <button >Take a picture</button>
-           </Link>
-            
-           </BrowserRouter>
-        </form>
      </div>
 
     </div>
@@ -44,4 +47,4 @@ const page = () => {
   )
 }
 
-export default page
+export default page;

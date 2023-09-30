@@ -3,13 +3,13 @@ import Link from 'next/link'
 const Navbar = () => {
   return (
    <>
-    <div className='flex bg-white text-white font-medium justify-between items-center '>
+    <div className='flex bg-white text-white font-medium justify-between items-center p-1 '>
         <div className='flex items-center fill-none  p-2.5'>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzmHubWLgUfGK7gb3EWdGXV3sM1ieiQUxNBg&usqp=CAU'alt" alt=""  width={300} height={50}/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzmHubWLgUfGK7gb3EWdGXV3sM1ieiQUxNBg&usqp=CAU'alt" alt="" className='ml-4' width={300} height={50}/>
         
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/G20_India_2023_logo.svg/640px-G20_India_2023_logo.svg.png" alt=""  width={60} height={50} />
         </div>
-        <div className='flex gap-3 ml-2 text-black'>
+        <div className='flex gap-3 mr-8 text-black '>
             
             <h2 className='text-xl'><Link className='block w-full text-m text-slate-500
       file:mr-4 file:py-2 file:px-4

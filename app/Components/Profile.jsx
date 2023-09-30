@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Webcam from 'react-webcam'
 const WebcamComponent = () => <Webcam />
 const videoConstraints = {
@@ -12,6 +13,9 @@ const Profile = () => {
   const capture = React.useCallback(() => {
     const pictureSrc = webcamRef.current.getScreenshot()
     setPicture(pictureSrc)
+    console.log(pictureSrc)
+    // document.write(pictureSrc)
+    
   })
   return (
     <div className='align-items-center ml-96  '>
@@ -57,6 +61,7 @@ const Profile = () => {
           </button>
         )}
       </div>
+      <img src={picture} alt="" />
     </div>
   )
 }
